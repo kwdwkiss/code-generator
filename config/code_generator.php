@@ -1,5 +1,5 @@
 <?php
-$path = dir(__DIR__);
+$path = dirname(__DIR__);
 
 return [
     'namespace' => 'Modules\Common\Entities',
