@@ -16,6 +16,10 @@ class CodeGeneratorServiceProvider extends ServiceProvider
 
     public function register()
     {
+        if ($this->app->environment() == 'production') {
+            return;
+        }
+
         $this->mergeConfigFrom(__DIR__ . '/../config/code_generator.php', 'code_generator');
 
         $this->publishes([
