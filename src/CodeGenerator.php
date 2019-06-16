@@ -30,31 +30,31 @@ class CodeGenerator
 
     protected $namespace = 'Modules\Common\Entities';
 
-    protected $modelStubPath = 'app/cly/Tool/CodeGenerator/stubs/model.stub';
+    protected $modelStubPath = __DIR__ . '/stubs/model.stub';
 
     protected $modelDistPath = 'Modules/Common/Entities';
 
-    protected $migrationStubPath = 'app/cly/Tool/CodeGenerator/stubs/migration.stub';
+    protected $migrationStubPath = __DIR__ . '/stubs/migration.stub';
 
     protected $migrationDistPath = 'database/migrations';
 
-    protected $resourceStubPath = 'app/cly/Tool/CodeGenerator/stubs/resource.stub';
+    protected $resourceStubPath = __DIR__ . '/stubs/resource.stub';
 
     protected $resourceDistPath = 'Modules/Common/Transformers';
 
-    protected $adminControllerStubPath = 'app/cly/Tool/CodeGenerator/stubs/admin_controller.stub';
+    protected $adminControllerStubPath = __DIR__ . '/stubs/admin_controller.stub';
 
     protected $adminControllerDistPath = 'Modules/Admin/Http/Controllers';
 
-    protected $adminRouteStubPath = 'app/cly/Tool/CodeGenerator/stubs/admin_route.stub';
+    protected $adminRouteStubPath = __DIR__ . '/stubs/admin_route.stub';
 
     protected $adminRouteDistPath = 'Modules/Admin/Routes/web.php';
 
-    protected $indexControllerStubPath = 'app/cly/Tool/CodeGenerator/stubs/index_controller.stub';
+    protected $indexControllerStubPath = __DIR__ . '/stubs/index_controller.stub';
 
     protected $indexControllerDistPath = 'Modules/Index/Http/Controllers';
 
-    protected $indexRouteStubPath = 'app/cly/Tool/CodeGenerator/stubs/index_route.stub';
+    protected $indexRouteStubPath = __DIR__ . '/stubs/index_route.stub';
 
     protected $indexRouteDistPath = 'Modules/Index/Routes/web.php';
 
