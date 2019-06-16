@@ -15,5 +15,12 @@
     "require": {
         "illuminate/support": "^5.5",
         "illuminate/console": "^5.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cly\\CodeGenerator\\CodeGeneratorServiceProvider"
+            ]
+        }
     }
 }
