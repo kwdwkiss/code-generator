@@ -1,0 +1,19 @@
+{
+    "name": "cly/code_generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kwdwkiss",
+            "email": "kwdwkisscly@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cly\\CodeGenerator\\":"src"
+        }
+    },
+    "require": {
+        "illuminate/support": "^5.5",
+        "illuminate/console": "^5.5"
+    }
+}

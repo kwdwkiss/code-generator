@@ -1,0 +1,65 @@
+<?php
+
+
+namespace Modules\Index\Http\Controllers;
+
+
+use Modules\Common\Entities\User;
+use Modules\Common\Exceptions\MsgException;
+use Modules\Common\Http\Controllers\Controller;
+use Modules\Common\Transformers\UserResource;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        $perPage = request('perPage');
+
+        $query = User::query();
+
+        $query->orderBy('id', 'desc');
+
+        $pageData = $query->paginate($perPage);
+
+        return UserResource::collection($pageData);
+    }
+
+    public function create()
+    {
+        $field = request('field');
+
+        User::create([
+
+        ]);
+
+        return ['message' => '创建成功'];
+    }
+
+    public function show()
+    {
+        $id = request('id');
+
+        $data = User::find($id);
+
+        if (!$data) {
+            throw new MsgException('数据不存在');
+        }
+
+        return new UserResource($data);
+    }
+
+    public function delete()
+    {
+        $id = request('id');
+
+        $data = User::find($id);
+
+        if (!$data) {
+            throw new MsgException('数据不存在');
+        }
+
+        $data->delete();
+
+        return ['message' => '删除成功'];
+    }
+}

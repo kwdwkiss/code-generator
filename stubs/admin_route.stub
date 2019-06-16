@@ -1,0 +1,5 @@
+Route::get('/group/index', 'GroupController@index')->name('团队列表');
+Route::post('/group/create', 'GroupController@create')->name('团队创建');
+Route::get('/group/show', 'GroupController@show')->name('团队详情');
+Route::post('/group/update', 'GroupController@update')->name('团队更新');
+Route::post('/group/delete', 'GroupController@delete')->name('团队删除');
